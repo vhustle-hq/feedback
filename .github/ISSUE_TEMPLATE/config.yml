@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a security problem (private)
+    url: https://github.com/vhustle-hq/feedback/security/advisories/new
+    about: Never report security problems in a public issue.
+  - name: Account, subscription, privacy or data deletion
+    url: https://github.com/vhustle-hq/.github/blob/main/SUPPORT.md
+    about: Use You → Help in the app. Never post account details publicly.
+  - name: Read the rules before you post
+    url: https://github.com/vhustle-hq/feedback#rules
+    about: Issues that skip the form or break the rules are closed without a reply.

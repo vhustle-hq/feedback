@@ -1,0 +1,123 @@
+name: Bug report
+description: Something in the Vhustle app, website or an email doesn't work as it should.
+title: "[Bug] "
+labels:
+  - "type: bug"
+  - "status: needs-triage"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Read the [rules](https://github.com/vhustle-hq/feedback#rules) first. Reports that skip required fields or include personal data are closed.
+
+        **Security problem?** Don't post it here. [Report it privately](https://github.com/vhustle-hq/feedback/security/advisories/new).
+
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Before you submit
+      options:
+        - label: I searched [open and closed issues](https://github.com/vhustle-hq/feedback/issues?q=is%3Aissue) and this bug hasn't been reported.
+          required: true
+        - label: This issue describes one bug only.
+          required: true
+        - label: I'm on the latest version of the app, or the problem is on the website or in an email.
+          required: true
+        - label: This issue contains no personal data (email, phone, account ID, weight, food, sleep or heart-rate data) and my screenshots are cropped or blurred.
+          required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Where does it happen?
+      options:
+        - iPhone app
+        - Android app
+        - Website (vhustle.app)
+        - Email from Vhustle
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which part of Vhustle?
+      options:
+        - Onboarding or sign-in
+        - Train (workouts)
+        - Recover (readiness)
+        - Sleep
+        - Fuel (food logging)
+        - Vee (chat and coaching)
+        - Friends and challenges
+        - Pro, subscription or paywall
+        - Settings or account
+        - Health data sync (Apple Health, Health Connect, watch)
+        - Website or waitlist
+        - Something else
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: App version
+      description: In the app, go to You → Settings and scroll to the bottom. Write "n/a" for the website or an email.
+      placeholder: "1.0.0 (42)"
+    validations:
+      required: true
+
+  - type: input
+    id: device
+    attributes:
+      label: Device and OS version
+      description: For the website, give your browser and its version instead.
+      placeholder: "iPhone 15, iOS 18.2  /  Pixel 8, Android 15  /  Chrome 131 on macOS"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Number each step, starting from opening the app or page.
+      placeholder: |
+        1. Open the app and go to Home
+        2. Tap the + button
+        3. Type "chicken salad" and tap Log
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened instead
+      description: Include any error message, word for word.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: How often does it happen?
+      options:
+        - Every time
+        - Sometimes
+        - Once
+    validations:
+      required: true
+
+  - type: textarea
+    id: media
+    attributes:
+      label: Screenshots or screen recording
+      description: Optional. Crop or blur anything personal before you attach it.
+    validations:
+      required: false

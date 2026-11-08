@@ -1,0 +1,65 @@
+name: Feature request
+description: An idea to make Vhustle better.
+title: "[Feature] "
+labels:
+  - "type: feature"
+  - "status: needs-triage"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Read the [rules](https://github.com/vhustle-hq/feedback#rules) first. If someone already asked for this, add a 👍 to their issue instead of opening a new one.
+
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Before you submit
+      options:
+        - label: I searched [open and closed issues](https://github.com/vhustle-hq/feedback/issues?q=is%3Aissue) and nobody has requested this yet.
+          required: true
+        - label: This issue describes one idea only.
+          required: true
+        - label: This issue contains no personal data.
+          required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which part of Vhustle?
+      options:
+        - Train (workouts)
+        - Recover (readiness)
+        - Sleep
+        - Fuel (food logging)
+        - Vee (chat and coaching)
+        - Friends and challenges
+        - Pro
+        - Health data sync (Apple Health, Health Connect, watch)
+        - Website
+        - Something else
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      description: Describe what you're trying to do and what gets in the way today. Start with the problem, not the solution.
+      placeholder: "I train at 6 am, and Vee's morning note arrives after I've finished my workout."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would you like to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: What do you do today instead?
+      description: Optional. Workarounds or other apps you use for this.
+    validations:
+      required: false
